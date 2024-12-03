@@ -69,6 +69,8 @@ body {
 }
 
 /* Home Section */
+
+
 .home {
     display: flex;
     justify-content: center;
@@ -79,6 +81,7 @@ body {
 }
 
 .home h1 {
+    font-family: 'Times New Roman', Times, serif;
     font-size: 50px;
     font-weight: 600;
     margin-right: 50px;
@@ -87,6 +90,7 @@ body {
     padding-left: 20px;
     border-radius: 10px;
     box-shadow: 5px 5px 5px 5px grey;
+    border:1px solid  grey ;
 }
 
 .home p {
@@ -95,12 +99,16 @@ body {
 }
 
 
+
+
 /* Typing Effect */
 #typing {
-    font-family:'Times New Roman', Times, serif;
-    font-weight: 600;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 700;
     color: #ff6347;
     font-size: 30px;
+    font-style: normal;
+      
 }
 
 .cursor {
@@ -125,25 +133,42 @@ body {
     font-weight: bold;
     margin-right: 20px;
     border-radius: 5px;
-    transition: 0.3s;
+    transition: 0.5s;
 }
 
 .btn:hover {
     background-color: #a1a1a1;
+    background: transparent;
+    color:  #ff6347;
+    box-shadow: none;
+    border: 3px solid rgb(142, 142, 142);
+
     
 }
 
 .sci a {
     font-size: 40px;
-    color: #707070;
+   
     
     margin: 0 10px;
-    transition: color 0.3s;
+    
+
+    display: inline-flex;
+    padding: 10px;
+    border: 3px solid #ff6347;
+    border-radius: 50%;
+    font-size: 25px;
+    margin: 0 8px;
+    color: #4b4b4b;
+    transition: .5s;
+
 }
 
 .sci a:hover {
-    color: #ff6347;
+    background-color: #ff6347;
     
+    color: black;
+    box-shadow: 0 0 10px #ff6347;
    
 }
 
@@ -161,15 +186,7 @@ body {
 }
 
 
-/* Footer */
-.footer {
-    text-align: center;
-    padding: 1rem 0;
-    background: #f8f8f8;
-    margin-top: auto;
-    font-size: 0.9rem;
-    color: #666;
-}
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -206,8 +223,11 @@ body {
 
   .picture img {
     width: 400px;
-
     border-radius: 8px;
+    box-shadow: 0 8px 8px 0 #333;
+    margin-left: 100px;
+    padding: 10px;
+    
   }
 
   /* About Me div styles */
@@ -215,10 +235,15 @@ body {
     width: 45%;
     font-family: Arial, sans-serif;
     color: #333;
+
+    border:1px solid  #333;
+    border-radius: 20px;
+    padding: 50px;
+    box-shadow: 1px 0px 10px 1px #333 ;
   }
 
-  .about-me h2 {
-    font-size: 1.8em;
+  .about-me h1 {
+    
     margin-bottom: 10px;
   }
 
@@ -235,4 +260,269 @@ body {
 
 /* ------------------------------------------------------------------------------------------ */
 
-/* skills */
+/* project */
+
+#projects {
+    text-align: center;
+    padding: 50px 0;
+  }
+  
+  #projects h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .project-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 0 20px;
+  }
+  
+  .card {
+    background-color: white;
+    width: 300px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .card-content {
+    padding: 20px;
+  }
+  
+  .card-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .card-content p {
+    font-size: 1rem;
+    color: #555;
+    text-align: justify;
+  }
+
+  /* ------------------------------------------------------------------------------------------------- */
+
+/* skill */
+
+
+#skills {
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  #skills h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #2c3e50;
+  }
+  
+  .skills-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  .skill {
+    background-color: #fff4e8;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .skill-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .skill-name {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #2c3e50;
+  }
+  
+  .skill-percentage {
+    font-size: 1.1rem;
+    color: #7f8c8d;
+  }
+  
+  .skill-bar {
+    width: 100%;
+    height: 10px;
+    background-color: #ecf0f1;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .progress {
+    height: 100%;
+    background-color:  #ff6347;
+    border-radius: 5px;
+    transition: width 0.5s ease-in-out;
+  }
+
+  .skillContent{
+    display: flex;
+    margin: 50px;
+    text-align: justify;
+    
+  }
+ 
+  .skillContent h1{
+    text-align: left;
+  
+    
+  }
+
+  .skillContent p{
+    margin-top: 10px;
+  }
+
+  .fullStackDev, .sqa , .javaDev {
+    margin: 50px;
+    padding: 20px;
+    border-radius: 10px;
+    border:1px solid #fd8d79; 
+    overflow: hidden;
+    
+    width: 33%;
+    height: 500px;
+  
+    
+    
+  }
+
+
+
+  /* ------------------------------------------------------------------------------------------------- */
+
+/* Contact me */
+
+
+
+
+  
+.contract {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+
+}
+
+.contact-form {
+  background-color: #fff;
+  padding: 30px;
+  width: 700px;
+  border-radius: 8px;
+  border:1px solid #fd8d79;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  margin: 20px;
+}
+
+.contact-form h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.contact-form label {
+  display: block;
+  text-align: left;
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0 20px;
+  border-radius: 5px;
+  border: 1px solid #fd8d79;
+  font-size: 14px;
+}
+
+
+
+.contact-form button {
+  background-color: #f88463;
+  
+  
+  
+  padding: 10px;
+  width: 50%;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #f53311;
+}
+
+/* Output Div */
+.output-div {
+  display: none;
+  background-color: #fff;
+  padding: 20px;
+
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.output-div h3 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.output-div p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.output-div button {
+  background-color: #fe8300;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.output-div button:hover {
+  background-color: #e53935;
+}
+
+  
+
+
+
+  /* Footer */
+.footer {
+    text-align: center;
+    padding: 1rem 0;
+    background: #fff4e8;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #666;
+}
